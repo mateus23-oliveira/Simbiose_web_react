@@ -1,10 +1,10 @@
-import { IUser } from "../interfaces/user.interface";
-import { UserModel } from "../models/user.model";
+import { IEspecie } from "../interfaces/user.interface";
+import { EspecieModel } from "../models/user.model";
 
 export class UserService {
   
-  async create(user: IUser) {
-    return await UserModel.create(user);
+  async criar(eSpecie: IEspecie) {
+    return await EspecieModel.create(eSpecie);
   }
 
 }

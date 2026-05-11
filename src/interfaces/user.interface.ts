@@ -1,5 +1,6 @@
-export interface IUser {
-  name: string;
-  email: string;
-  password: string;
+export interface IEspecie {
+  nome: string;
+  tempoVida: number;
+  descricao: string;
+  habitat: string;
 }

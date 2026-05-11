@@ -5,7 +5,7 @@ export class UserController {
   private userService = new UserService();
 
   async create(req: Request, res: Response) {
-    const user = await this.userService.create(req.body);
+    const user = await this.userService.criar(req.body);
     return res.json(user);
   }
 

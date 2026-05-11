@@ -1,12 +1,28 @@
 import mongoose, { Schema, Document } from "mongoose";
-import { IUser } from "../interfaces/user.interface";
+import { IEspecie } from "../interfaces/user.interface";
 
-export interface IUserDocument extends IUser, Document {}
+export interface IEspecieDocument extends IEspecie, Document {}
 
-const UserSchema: Schema = new Schema({
-  name: { type: String, required: true },
-  email: { type: String, required: true },
-  password: { type: String, required: true },
+const EspecieSchema: Schema = new Schema({
+  nome: { 
+    type: String,
+     required: true },
+ 
+  
+     tempoVida: {
+       type: Number, 
+       required: true },
+  
+     descricao: { 
+      type: String, 
+      required: true },
+  
+      habitat: { type: String, 
+        required: true },
 });
 
-export const UserModel = mongoose.model<IUserDocument>("User", UserSchema);
+
+export const EspecieModel = mongoose.model<IEspecieDocument>(
+  "Especie",
+  EspecieSchema
+);
