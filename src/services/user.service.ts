@@ -1,10 +1,30 @@
 import { IEspecie } from "../interfaces/user.interface";
 import { EspecieModel } from "../models/user.model";
 
-export class UserService {
+export class EspecieService {
   
   async criar(eSpecie: IEspecie) {
     return await EspecieModel.create(eSpecie);
+  }
+
+  async listar() {
+    return await EspecieModel.find();
+  }
+
+  async buscarPorId(id: string) {
+    return await EspecieModel.findById(id);
+  } 
+
+  async atualizar(id: string, dados: Partial<IEspecie>) {
+    return await EspecieModel.findByIdAndUpdate(
+      id,
+      dados,
+      { new: true }
+    );
+  }
+
+  async deletar(id: string) {
+    return await EspecieModel.findByIdAndDelete(id);
   }
 
 }
