@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { UserController } from "../controllers/user.controller";
+import { EspecieController } from "../controllers/especie.controller";
 
 const router = Router();
-const controller = new UserController();
+const controller = new EspecieController();
 
 router.post("/", (req, res) => controller.create(req, res));
 router.get("/", (req, res) => controller.listar(req, res));

@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { EspecieService } from "../services/user.service";
 
-export class UserController {
+export class EspecieController {
   private especieService = new EspecieService();
 
   async create(req: Request, res: Response) {
