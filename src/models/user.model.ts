@@ -17,8 +17,15 @@ const EspecieSchema: Schema = new Schema({
       type: String, 
       required: true },
   
-      habitat: { type: String, 
+      habitat: { 
+        type: String, 
         required: true },
+
+      arquivo: {
+        type: String,
+        required: false,
+        default: null,
+},
 });
 
 
