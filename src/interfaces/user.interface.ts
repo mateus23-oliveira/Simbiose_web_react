@@ -3,4 +3,5 @@ export interface IEspecie {
   tempoVida: number;
   descricao: string;
   habitat: string;
+  arquivo?: string | null;
 }
